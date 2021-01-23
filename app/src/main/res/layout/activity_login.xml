@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="@dimen/custom_60dp"
+        android:layout_centerVertical="true">
+
+        <EditText
+            android:id="@+id/emailAdress"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/custom_40dp"
+            android:hint="@string/enter_your_email" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/custom_40dp"
+            android:layout_below="@id/emailAdress"
+            android:hint="@string/password"
+            android:inputType="textPassword"/>
+<Button
+    android:id="@+id/btnLogin"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/custom_40dp"
+    android:text="@string/login"/>
+    </LinearLayout>
+</RelativeLayout>
