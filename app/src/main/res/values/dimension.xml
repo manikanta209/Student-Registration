@@ -12,5 +12,7 @@
     <dimen name="custom_100dp">100dp</dimen>
     <dimen name="custom_120dp">120dp</dimen>
     <dimen name="custom_text_20sp">20sp</dimen>
+    <dimen name="custom_text_60sp">60sp</dimen>
+    <dimen name="custom_text_14sp">14sp</dimen>
 
 </resources>

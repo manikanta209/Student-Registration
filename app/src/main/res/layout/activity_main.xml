@@ -17,7 +17,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Student Registration"
+                android:text="@string/student_registration"
                 android:textColor="@color/white"
                 android:textSize="@dimen/custom_text_20sp" />
         </androidx.appcompat.widget.Toolbar>

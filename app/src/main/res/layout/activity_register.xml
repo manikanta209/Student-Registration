@@ -4,12 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/yellow"
-    tools:context=".Signup.login">
-
+    tools:context=".Signup.Register">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_centerVertical="true"
         android:layout_margin="@dimen/custom_60dp"
         android:gravity="center"
@@ -21,16 +20,32 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="@dimen/custom_30dp"
             android:gravity="center_horizontal"
-            android:text="@string/login"
+            android:text="@string/register"
             android:textColor="@color/black"
             android:textSize="@dimen/custom_text_60sp"
             android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/custom_40dp"
+            android:backgroundTint="@color/black"
+            android:hint="@string/enter_your_username" />
+
+        <EditText
+            android:id="@+id/age"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/custom_40dp"
+            android:inputType="number"
+            android:backgroundTint="@color/black"
+            android:hint="@string/enter_your_age" />
 
         <EditText
             android:id="@+id/emailAdress"
             android:layout_width="match_parent"
             android:layout_height="@dimen/custom_40dp"
             android:backgroundTint="@color/black"
+            android:inputType="textEmailAddress"
             android:hint="@string/enter_your_email" />
 
         <EditText
@@ -38,32 +53,15 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/custom_40dp"
             android:layout_below="@id/emailAdress"
+            android:backgroundTint="@color/black"
             android:hint="@string/password"
-            android:inputType="textPassword"
-            android:layout_marginTop="@dimen/custom_10dp"
-            android:layout_marginBottom="@dimen/custom_10dp"
-            android:backgroundTint="@color/black" />
+            android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/btnLogin"
+            android:id="@+id/btnRegisterUser"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/custom_50dp"
-            android:text="@string/login" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/custom_20dp"
-            android:layout_margin="@dimen/custom_10dp"
-            android:gravity="center_horizontal"
-            android:text="@string/or"
-            android:textColor="@color/black"
-            android:textSize="@dimen/custom_text_20sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/btnRegref"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/custom_50dp"
+            android:layout_height="@dimen/custom_40dp"
+            android:layout_marginTop="@dimen/custom_20dp"
             android:text="@string/register" />
     </LinearLayout>
 </RelativeLayout>

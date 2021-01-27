@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
         tabLayout.setupWithViewPager(viewPager);
 
-        ViewPagerAdapter viewPagerAdapter=new ViewPagerAdapter(getSupportFragmentManager(),0);
+        ViewPagerAdapter viewPagerAdapter= new ViewPagerAdapter(getSupportFragmentManager(), 0);
 
         viewPagerAdapter.addFragemnt(addStudent,"ADD");
         viewPagerAdapter.addFragemnt(listStudent,"LIST");
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         badgeDrawable.setNumber(12);
     }
 
-    private class ViewPagerAdapter extends FragmentPagerAdapter {
+    private static class ViewPagerAdapter extends FragmentPagerAdapter {
 
         private List<Fragment> fragments=new ArrayList<>();
         private List<String> fragmentTitle=new ArrayList<>();

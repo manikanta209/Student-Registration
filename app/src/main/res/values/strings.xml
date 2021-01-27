@@ -2,11 +2,19 @@
     <string name="app_name">Student Registration</string>
     <string name="add">ADD</string>
     <string name="list">LIST</string>
-    <string name="enter_your_email">Enter Your Email...</string>
+    <string name="enter_your_email">Email</string>
     <string name="password">Password</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="login">LOGIN</string>
+    <string name="register">REGISTER</string>
+    <string name="enter_your_username">Username</string>
+    <string name="enter_your_age">Age</string>
+    <string name="or">-------------- OR --------------</string>
+    <string name="student_name">Student Name</string>
+    <string name="student_registration">Student Registration</string>
+    <string name="update">UPDATE</string>
+
 
 </resources>
