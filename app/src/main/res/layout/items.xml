@@ -2,35 +2,48 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp">
+   android:layout_marginLeft="@dimen/custom_10dp"
+    android:layout_marginRight="@dimen/custom_10dp"
+    android:layout_marginTop="1dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_vertical"
         android:orientation="horizontal"
         android:padding="16dp">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="wrap_content"
-        android:textSize="14sp" />
+        <TextView
+            android:id="@+id/countNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/custom_text_20sp" />
 
-    <ImageView
-        android:id="@+id/btnEdit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/custom_10dp"
-        android:src="@drawable/ic_baseline_edit_24"
-        android:layout_marginStart="@dimen/custom_10dp" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/custom_10dp"
+            android:layout_marginLeft="@dimen/custom_10dp"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/custom_text_20sp" />
 
-    <ImageView
-        android:id="@+id/btnDelete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/custom_10dp"
-        android:src="@drawable/ic_baseline_delete_24"
-        android:layout_marginStart="@dimen/custom_10dp" />
+        <ImageView
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/custom_10dp"
+            android:layout_marginLeft="@dimen/custom_10dp"
+            android:src="@drawable/ic_baseline_edit_24" />
+
+        <ImageView
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/custom_10dp"
+            android:layout_marginLeft="@dimen/custom_10dp"
+            android:src="@drawable/ic_baseline_delete_24" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

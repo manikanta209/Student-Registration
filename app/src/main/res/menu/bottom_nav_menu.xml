@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/addItem"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_person_add_24"
+        android:title="@string/add" />
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="@string/Home" />
+    <item
+        android:id="@+id/listItem"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_groups_24"
+        android:title="@string/list" />
+
+
+</menu>

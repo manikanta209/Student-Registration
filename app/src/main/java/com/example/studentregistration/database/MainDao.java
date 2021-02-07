@@ -13,13 +13,13 @@ import static androidx.room.OnConflictStrategy.REPLACE;
 @Dao
 public interface MainDao {
 
-    @Insert(onConflict = REPLACE)
+    @Insert
     void insert(MainData mainData);
 
     @Delete
     void delete(MainData mainData);
 
-    @Query("UPDATE studentdata SET firstname = :sUsername WHERE AutoID = :sAutoID")
+    @Query("UPDATE studentdata SET UserName = :sUsername WHERE AutoID = :sAutoID")
     void update(int sAutoID, String sUsername);
 
     @Query("SELECT * FROM STUDENTDATA")

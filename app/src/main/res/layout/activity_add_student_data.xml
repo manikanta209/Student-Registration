@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddStudentData">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/student_diary"
+                android:textColor="@color/white"
+                android:textSize="@dimen/custom_text_20sp" />
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <TextView
+        android:id="@+id/studentreg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appbarAdd"
+        android:layout_marginTop="@dimen/custom_40dp"
+        android:gravity="center_horizontal"
+        android:text="@string/StudentReg"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/black"
+        android:textSize="@dimen/text_size_25_sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/studentreg"
+        android:layout_marginTop="@dimen/custom_20dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/custom_60dp"
+            android:layout_marginStart="@dimen/custom_30dp"
+            android:layout_marginLeft="@dimen/custom_30dp"
+            android:layout_marginTop="@dimen/custom_10dp"
+            android:layout_marginEnd="@dimen/custom_30dp"
+            android:hint="@string/username">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/studentName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/custom_60dp"
+            android:layout_marginStart="@dimen/custom_30dp"
+            android:layout_marginLeft="@dimen/custom_30dp"
+            android:layout_marginTop="@dimen/custom_10dp"
+            android:layout_marginEnd="@dimen/custom_30dp"
+            android:hint="@string/USN">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/studentNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/custom_60dp"
+            android:layout_marginStart="@dimen/custom_30dp"
+            android:layout_marginLeft="@dimen/custom_30dp"
+            android:layout_marginTop="@dimen/custom_10dp"
+            android:layout_marginEnd="@dimen/custom_30dp"
+            android:hint="@string/email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/studentEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/custom_60dp"
+            android:layout_marginStart="@dimen/custom_30dp"
+            android:layout_marginLeft="@dimen/custom_30dp"
+            android:layout_marginTop="@dimen/custom_10dp"
+            android:layout_marginEnd="@dimen/custom_30dp"
+            android:hint="@string/mobile">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/studentMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:maxLength="10" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/custom_30dp"
+            android:layout_marginLeft="@dimen/custom_30dp"
+            android:layout_marginTop="@dimen/custom_10dp"
+            android:layout_marginEnd="@dimen/custom_30dp"
+            android:hint="@string/address">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/studentAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="3" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/custom_30dp"
+            android:layout_marginLeft="@dimen/custom_30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/custom_30dp"
+            android:text="@string/register" />
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemTextColor="@color/selector"
+        app:itemIconTint="@color/selector"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="@color/lightgray"/>
+</RelativeLayout>

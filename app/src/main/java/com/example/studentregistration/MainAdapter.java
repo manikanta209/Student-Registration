@@ -26,9 +26,9 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     private RoomDB database;
 
     //Create constructor
-    public MainAdapter(Activity context, List<MainData> dataList){
-        this.context=context;
-        this.dataList=dataList;
+    public MainAdapter(Activity context, List<MainData> dataList) {
+        this.context = context;
+        this.dataList = dataList;
         notifyDataSetChanged();
     }
 
@@ -37,45 +37,48 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         //Initialize View
-        View view= LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.items,parent,false);
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.items, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         //Initialize main data
-        MainData data=dataList.get(position);
+        MainData data = dataList.get(position);
 
         //Initialize database
-        database =RoomDB.getInstance(context);
+        database = RoomDB.getInstance(context);
 
         //Set text on text view
         holder.textView.setText(data.getUserName());
+        //set count Number
+        holder.countNumber.setText(String.valueOf(position + 1 + "."));
+
 
         holder.btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Initialize main data
-                MainData mainData=dataList.get(holder.getAdapterPosition());
+                MainData mainData = dataList.get(holder.getAdapterPosition());
                 //Get ID
-                int sID=mainData.getAutoID();
+                int sID = mainData.getAutoID();
                 //Get name
-                String sUsername=mainData.getUserName();
+                String sUsername = mainData.getUserName();
 
                 //Create dialog
-                Dialog dialog=new Dialog(context);
+                Dialog dialog = new Dialog(context);
                 //Set Content view
                 dialog.setContentView(R.layout.dialog_update);
                 //Initialize width
-                int width= WindowManager.LayoutParams.MATCH_PARENT;
-                int height=WindowManager.LayoutParams.WRAP_CONTENT;
-                dialog.getWindow().setLayout(width,height);
+                int width = WindowManager.LayoutParams.MATCH_PARENT;
+                int height = WindowManager.LayoutParams.WRAP_CONTENT;
+                dialog.getWindow().setLayout(width, height);
                 dialog.show();
 
                 //Initialize and assign Variable
-                EditText editText=dialog.findViewById(R.id.edUsername);
-                Button btnUpdate=dialog.findViewById(R.id.btnUpdate);
+                EditText editText = dialog.findViewById(R.id.edUsername);
+                Button btnUpdate = dialog.findViewById(R.id.btnUpdate);
 
                 //SetText  for edit text
                 editText.setText(sUsername);
@@ -86,9 +89,9 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
                         dialog.dismiss();
 
                         //Get updated text from editext
-                        String username=editText.getText().toString().trim();
+                        String username = editText.getText().toString().trim();
                         //Update text in database
-                        database.mainDao().update(sID,username);
+                        database.mainDao().update(sID, username);
 
                         //Notify when data is updated
                         dataList.clear();
@@ -104,14 +107,14 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
             @Override
             public void onClick(View v) {
                 //Initialize main data
-                MainData d=dataList.get(holder.getAdapterPosition());
+                MainData d = dataList.get(holder.getAdapterPosition());
                 //Delete text from database
                 database.mainDao().delete(d);
                 //Notify when deleted
-                int position=holder.getAdapterPosition();
+                int position = holder.getAdapterPosition();
                 dataList.remove(position);
                 notifyItemRemoved(position);
-                notifyItemRangeChanged(position,dataList.size());
+                notifyItemRangeChanged(position, dataList.size());
             }
         });
     }
@@ -122,15 +125,17 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView textView;
-        ImageView btnEdit,btnDelete;
+        TextView textView, countNumber;
+        ImageView btnEdit, btnDelete;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             //Assign variable
-            textView=itemView.findViewById(R.id.textView);
-            btnEdit=itemView.findViewById(R.id.btnEdit);
-            btnDelete=itemView.findViewById(R.id.btnDelete);
+            textView = itemView.findViewById(R.id.textView);
+            countNumber = itemView.findViewById(R.id.countNumber);
+            btnEdit = itemView.findViewById(R.id.btnEdit);
+            btnDelete = itemView.findViewById(R.id.btnDelete);
         }
     }
 }

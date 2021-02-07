@@ -14,7 +14,17 @@
     <string name="or">-------------- OR --------------</string>
     <string name="student_name">Student Name</string>
     <string name="student_registration">Student Registration</string>
+    <string name="student_diary">Student Diary</string>
     <string name="update">UPDATE</string>
+    <string name="username">Full Name</string>
+    <string name="USN">Student Number</string>
+    <string name="email">E-mail</string>
+    <string name="mobile">Mobile Number</string>
+    <string name="address">Address</string>
+    <string name="StudentReg">Student Registration</string>
+    <string name="registration">REGISTRATION</string>
+    <string name="studentlist">ALL STUDENTS</string>
+    <string name="Home">HOME</string>
 
 
 </resources>

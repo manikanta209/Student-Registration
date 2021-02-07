@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AllStudentList"
+    android:background="@color/lightgray">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/student_registration"
+                android:textColor="@color/white"
+                android:textSize="@dimen/custom_text_20sp" />
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+<!--    <TextView-->
+<!--        android:id="@+id/studentlist"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textSize="@dimen/custom_text_40sp"-->
+<!--        android:layout_below="@id/appbarList"-->
+<!--        android:text="@string/studentlist"-->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:layout_marginTop="@dimen/custom_20dp"/>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/custom_20dp"
+        tools:listitem="@layout/items"
+        android:layout_below="@id/appbarList" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemTextColor="@color/selector"
+        app:itemIconTint="@color/selector"
+        android:background="@color/lightgray"
+        app:menu="@menu/bottom_nav_menu" />
+
+</RelativeLayout>

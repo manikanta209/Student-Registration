@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.studentregistration.AddStudentData;
 import com.example.studentregistration.MainActivity;
 import com.example.studentregistration.R;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -20,7 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Register extends AppCompatActivity implements View.OnClickListener {
-    EditText edUsername,edAge,edEmail,edPassword;
+    EditText edUsername,edEmail,edPassword;
     Button buttonRegister;
     private FirebaseAuth mAuth;
 
@@ -30,7 +31,6 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
         setContentView(R.layout.activity_register);
 
         edUsername=findViewById(R.id.username);
-        edAge=findViewById(R.id.age);
         edEmail=findViewById(R.id.emailAdress);
         edPassword=findViewById(R.id.password);
         buttonRegister=findViewById(R.id.btnRegisterUser);
@@ -50,7 +50,6 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
 
     private void registerUser() {
         String username=edUsername.getText().toString();
-        String age=edAge.getText().toString();
         String password=edPassword.getText().toString();
         String email=edEmail.getText().toString();
 
@@ -61,11 +60,6 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
             return;
         }
 
-        if (age.isEmpty()) {
-            edAge.setError("Age is Required");
-            edAge.requestFocus();
-            return;
-        }
 
         if (email.isEmpty()) {
             edEmail.setError("Email is Required");
@@ -95,7 +89,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
            if (task.isSuccessful()){
-               startActivity(new Intent(Register.this, MainActivity.class));
+               startActivity(new Intent(Register.this, AddStudentData.class));
                finish();
            }
            else {

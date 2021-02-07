@@ -20,30 +20,23 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="@dimen/custom_30dp"
             android:gravity="center_horizontal"
-            android:text="@string/register"
+            android:text="@string/registration"
             android:textColor="@color/black"
-            android:textSize="@dimen/custom_text_60sp"
+            android:textSize="@dimen/custom_text_40sp"
             android:textStyle="bold" />
 
         <EditText
             android:id="@+id/username"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/custom_40dp"
+            android:layout_height="@dimen/custom_50dp"
             android:backgroundTint="@color/black"
             android:hint="@string/enter_your_username" />
 
-        <EditText
-            android:id="@+id/age"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/custom_40dp"
-            android:inputType="number"
-            android:backgroundTint="@color/black"
-            android:hint="@string/enter_your_age" />
 
         <EditText
             android:id="@+id/emailAdress"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/custom_40dp"
+            android:layout_height="@dimen/custom_50dp"
             android:backgroundTint="@color/black"
             android:inputType="textEmailAddress"
             android:hint="@string/enter_your_email" />
@@ -51,8 +44,7 @@
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/custom_40dp"
-            android:layout_below="@id/emailAdress"
+            android:layout_height="@dimen/custom_50dp"
             android:backgroundTint="@color/black"
             android:hint="@string/password"
             android:inputType="textPassword" />
@@ -62,6 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/custom_40dp"
             android:layout_marginTop="@dimen/custom_20dp"
-            android:text="@string/register" />
+            android:text="@string/register"
+            android:backgroundTint="@color/black"/>
     </LinearLayout>
 </RelativeLayout>

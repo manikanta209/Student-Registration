@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.studentregistration.AddStudentData;
 import com.example.studentregistration.MainActivity;
 import com.example.studentregistration.R;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -84,14 +85,16 @@ public class login extends AppCompatActivity implements View.OnClickListener {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-                    if (firebaseUser.isEmailVerified()) {
-                        startActivity(new Intent(login.this, MainActivity.class));
-                        finish();
-                    } else {
-                        firebaseUser.sendEmailVerification();
-                        Toast.makeText(login.this, "Check your email to verify your account", Toast.LENGTH_SHORT).show();
-                    }
+                    startActivity(new Intent(login.this, AddStudentData.class));
+                    finish();
+//                    FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+//                    if (firebaseUser.isEmailVerified()) {
+//                        startActivity(new Intent(login.this, MainActivity.class));
+//                        finish();
+//                    } else {
+//                        firebaseUser.sendEmailVerification();
+//                        Toast.makeText(login.this, "Check your email to verify your account", Toast.LENGTH_SHORT).show();
+//                    }
                 } else {
                     Toast.makeText(login.this, "Auth Failed", Toast.LENGTH_SHORT).show();
                 }
